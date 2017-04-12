@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
 @import "bootstrap-sprockets";
@@ -20,6 +19,7 @@ body {
   padding-top: 100px;
   background-color: black;
   /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  color: white;
 }
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 .business-header {
@@ -41,7 +41,7 @@ body {
 /* Customize the text color and shadow color and to optimize text legibility. */
 .tagline {
   text-shadow: 0 0 10px #000;
-  color: #fff;
+  color: #fffff;
 }
 .img-center {
   margin: 0 auto;
@@ -49,6 +49,17 @@ body {
   height: 300px;
   border-radius: 50%;
 }
+
+.photo-show {
+  height: 475px;
+  width: 325px;
+  padding: 1.5em 1.25em;
+}
 footer {
   margin: 50px 0;
 }
+
+#map {
+  height: 400px;
+  width: 400px;
+ }

@@ -1,4 +1,4 @@
-<%= simple_form_for(@photo, { class: 'form-horizontal' }) do |f| %>
+<%= simple_form_for(@photo) do |f| %>
   <% if @photo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
@@ -11,19 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.input:title %>
-  </div>
-  <div class='field'>
+    <%= f.input :title %>
     <%= f.input :image, as: :file %>
-  </div>
-  <div class="field">
-    <%= f.input :descriptoin, as: :text %>
-  </div>
-  <div class="field">
-    <%= f.input :file %>
-  </div>
-  <div class="actions">
+    <%= f.input :descriptoin %>
     <%= f.submit %>
-  </div>
 <% end %>

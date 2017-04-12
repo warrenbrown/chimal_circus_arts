@@ -1,46 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Photos</h1>
-
-
-  <tbody>
-    <% @photos.each do |photo| %>
-    <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-              <%= photo.title %>
-              <%= photo.descriptoin %>
-              <%= photo.file %>
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <td><%= photo.title %></td>
-        <td><%= photo.descriptoin %></td>
-        <td><%= photo.file %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-
-
-<%= link_to 'New Photo', new_photo_path %>
+<!-- Projects Row -->
+<div class="row">
+  <% @photos.each do |photo| %>
+    <div class="col-md-3 portfolio-item">
+      <a href="/photos/<%= photo.id %> ">
+        <%= image_tag photo.image.url(:image_index) %>
+      </a>
+    </div>
+  <% end %>
+</div>
+<!-- /.row -->

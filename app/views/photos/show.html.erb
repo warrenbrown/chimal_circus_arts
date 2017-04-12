@@ -14,6 +14,9 @@
   <strong>File:</strong>
   <%= @photo.file %>
 </p>
+<div>
+  <%= image_tag @photo.image.url(:image_index) %>
+</div>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
